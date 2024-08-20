@@ -85,35 +85,19 @@ while sigue:
                     'youtube': 'https://www.youtube.com',
                     'instagram': 'https://www.instagram.com',
                     'tryhackme': 'https://www.tryhackme.com',
-                    "whatsapp": "https://web.whatsapp.com/",
-                    "película": "https://playdede.nu/login"}
+                    "whatsapp": "https://web.whatsapp.com/"}
 
                     for i in list(sitios.keys()):
                         if i in comando:
                             habla(f'Abriendo {i}')
                             sleep(1.5)
                             subprocess.call(f'start chrome.exe {sitios[i]}', shell=True)
-                            if(i == "película"):
-                                sleep(2)
-                                bot.press("tab")
-                                bot.press("tab")
-                                bot.typewrite("Samu171")
-                                bot.press("tab")
-                                bot.typewrite("samuel35428")
-                                bot.press("enter")
                 elif 'ventana' in comando or ('abrir' in comando and 'ventana'in comando ):
                     ventanas={'visual': 'Code'}
                     for i in list(ventanas.keys()):
                         if i in comando:
                             habla(f'Abriendo {i}')
                             subprocess.call(f'start {ventanas[i]}', shell=True)
-
-                elif 'hablar' in comando and 'a' in comando:
-                    contacto={'mamá' : "606868296",
-                    'ana': '693731126',
-                    'papá':'670063666',
-                    'javi': '697263719',
-                    'noe': '634409188'}
 
                     for i in list(contacto.keys()): 
                         if i in comando:
